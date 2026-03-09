@@ -1,0 +1,61 @@
+[
+  {
+    "id": "1",
+    "titel": "GitHub Pages – Webseiten kostenlos hosten",
+    "kategorie_id": "1",
+    "datum": "2025-03-01",
+    "autor_id": "1",
+    "inhalt": [
+      {
+        "type": "text",
+        "content": "GitHub Pages ist ein kostenloser Hosting-Dienst von GitHub, mit dem du statische Webseiten direkt aus einem Repository veröffentlichen kannst."
+      },
+      {
+        "type": "img",
+        "content": "assets/img/github-pages.jpg"
+      },
+      {
+        "type": "text",
+        "content": "Alles was du brauchst ist ein GitHub-Account und ein Repository. Nach wenigen Klicks ist deine Seite unter username.github.io erreichbar."
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "titel": "Web APIs – Was steckt dahinter?",
+    "kategorie_id": "1",
+    "datum": "2025-03-05",
+    "autor_id": "2",
+    "inhalt": [
+      {
+        "type": "text",
+        "content": "Eine Web API (Application Programming Interface) ermöglicht die Kommunikation zwischen verschiedenen Anwendungen über das Internet."
+      },
+      {
+        "type": "text",
+        "content": "Bekannte Beispiele sind die Fetch API im Browser oder REST APIs für Likes und Kommentare – genau wie in diesem Blog."
+      },
+      {
+        "type": "img",
+        "content": "assets/img/web-api.jpg"
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "titel": "Warum HTML-Semantik so wichtig ist",
+    "kategorie_id": "1",
+    "datum": "2025-03-09",
+    "autor_id": "1",
+    "inhalt": [
+      {
+        "type": "text",
+        "content": "Semantisches HTML bedeutet, die richtigen HTML-Elemente für den richtigen Zweck zu verwenden. Ein nav ist ein nav – kein div."
+      },
+      {
+        "type": "text",
+        "content": "Suchmaschinen, Screenreader und andere Tools verstehen die Struktur deiner Seite besser, wenn du semantische Elemente wie header, main, article, section und footer verwendest."
+      }
+    ]
+  }
+]
