@@ -96,3 +96,12 @@ Duck.ai hat nie etwas nützlichen geliefert.
 [Ganzer Chat](docs/comp_duckai.html)
 
 > Auch wenn ich genauer wäre sind die meisten Modelle zu stur um hilfreich zu sein. Persönlich finde ich Sonnet 4.5 und vielecht Opus am besten.
+
+---
+
+## Styleguide
+
+Als nächstes habe ich KI gefragt mir ein Styleguide zu erstellen. Bis jetzt sind die meisten Dateien
+ platzhalter um die Struktur zu Prüfen.
+
+[Ganzer Chat](docs/ai_styleguide.html)
