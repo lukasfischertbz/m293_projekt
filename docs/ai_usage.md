@@ -87,7 +87,7 @@ Ich habe ungenau gefragt und auch kein gute antwort bekommen. Claude benötigt e
 
 Chat GPT ist weniger auf code fokussiert aber hat das Problem schneller gelöst.
 
-[Ganzer Chat](docs/compl_chatgpt.html)
+[Ganzer Chat](docs/coml_chatgpt.html)
 
 ### Duck.ai (gpt mini)
 
