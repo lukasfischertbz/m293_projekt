@@ -1,52 +1,64 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Ein Blog über Technologie, Wissenschaft und Alltag." />
-    <title>Blog – Home</title>
-    <link rel="stylesheet" href="assets/css/style.css" />
-  </head>
-  <body data-page="index">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Ein Blog über Technologie, Wissenschaft und Alltag."
+        />
+        <title>Blog – Home</title>
+        <link rel="stylesheet" href="assets/css/style.css" />
+    </head>
+    <body data-page="index">
+        <header>
+            <a href="index.html" class="logo">MeinBlog</a>
+            <nav aria-label="Hauptnavigation">
+                <ul>
+                    <li><a href="index.html" aria-current="page">Home</a></li>
+                    <li><a href="themen.html">Themen</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    <header>
-      <a href="index.html" class="logo">MeinBlog</a>
-      <nav aria-label="Hauptnavigation">
-        <ul>
-          <li><a href="index.html" aria-current="page">Home</a></li>
-          <li><a href="themen.html">Themen</a></li>
-          <li><a href="kontakt.html">Kontakt</a></li>
-        </ul>
-      </nav>
-    </header>
+        <main>
+            <section aria-labelledby="hero-heading">
+                <h1 id="hero-heading">Willkommen auf MeinBlog</h1>
+                <p>Artikel über Technologie, Wissenschaft und Alltag.</p>
+            </section>
 
-    <main>
+            <section aria-labelledby="neueste-artikel-heading">
+                <h2 id="neueste-artikel-heading">Neueste Artikel</h2>
 
-      <section aria-labelledby="hero-heading">
-        <h1 id="hero-heading">Willkommen auf MeinBlog</h1>
-        <p>Artikel über Technologie, Wissenschaft und Alltag.</p>
-      </section>
+                <div id="artikel-liste" role="list">
+                    <!-- wird per JS befüllt -->
+                </div>
 
-      <section aria-labelledby="neueste-artikel-heading">
-        <h2 id="neueste-artikel-heading">Neueste Artikel</h2>
-        <div id="artikel-liste" role="list">
-          <!-- wird per JS befüllt -->
-        </div>
-      </section>
+                <template id="artikel-template">
+                    <article class="artikel" role="listitem">
+                        <h3 class="artikel-titel"></h3>
+                        <p class="artikel-meta">
+                            <time class="artikel-datum"></time>
+                        </p>
+                        <p class="artikel-excerpt"></p>
+                        <a class="artikel-link">Weiterlesen</a>
+                    </article>
+                </template>
+            </section>
+        </main>
 
-    </main>
+        <footer>
+            <p>&copy; 2025 MeinBlog</p>
+            <nav aria-label="Footer-Navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="themen.html">Themen</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </nav>
+        </footer>
 
-    <footer>
-      <p>&copy; 2025 MeinBlog</p>
-      <nav aria-label="Footer-Navigation">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="themen.html">Themen</a></li>
-          <li><a href="kontakt.html">Kontakt</a></li>
-        </ul>
-      </nav>
-    </footer>
-
-    <script src="assets/js/main.js"></script>
-  </body>
+        <script src="assets/js/main.js"></script>
+    </body>
 </html>
