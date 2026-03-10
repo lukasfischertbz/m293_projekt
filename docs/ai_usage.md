@@ -105,3 +105,10 @@ Als nächstes habe ich KI gefragt mir ein Styleguide zu erstellen. Bis jetzt sin
  platzhalter um die Struktur zu Prüfen.
 
 [Ganzer Chat](docs/ai_styleguide.html)
+
+---
+
+## CSS loader
+
+Ich habe KI benutzt um zu schauen wie ich Desktop und Mobile CSS richtig setze. 
+Die KI hat nie eine Perfekte Antwort ausgegeben aber war hilfreich so das ich es selber machen konnte.

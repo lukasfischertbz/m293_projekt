@@ -1,86 +1,113 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Kontaktiere uns oder melde dich für den Newsletter an." />
-    <title>Blog – Kontakt</title>
-    <link rel="stylesheet" href="assets/css/style.css" />
-  </head>
-  <body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Kontaktiere uns oder melde dich für den Newsletter an."
+        />
+        <title>Blog – Kontakt</title>
+        <script type="module" src="assets/js/cssLoader.js"></script>
+    </head>
+    <body>
+        <header>
+            <a href="index.html" class="logo">MeinBlog</a>
+            <nav aria-label="Hauptnavigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="themen.html">Themen</a></li>
+                    <li>
+                        <a href="kontakt.html" aria-current="page">Kontakt</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
 
-    <header>
-      <a href="index.html" class="logo">MeinBlog</a>
-      <nav aria-label="Hauptnavigation">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="themen.html">Themen</a></li>
-          <li><a href="kontakt.html" aria-current="page">Kontakt</a></li>
-        </ul>
-      </nav>
-    </header>
+        <main>
+            <section aria-labelledby="kontakt-heading">
+                <h1 id="kontakt-heading">Kontakt</h1>
 
-    <main>
+                <form id="kontakt-formular" novalidate>
+                    <fieldset>
+                        <legend>Nachricht senden</legend>
 
-      <section aria-labelledby="kontakt-heading">
-        <h1 id="kontakt-heading">Kontakt</h1>
+                        <label for="name">Name</label>
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            autocomplete="name"
+                            required
+                        />
 
-        <form id="kontakt-formular" novalidate>
-          <fieldset>
-            <legend>Nachricht senden</legend>
+                        <label for="email">E-Mail</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            autocomplete="email"
+                            required
+                        />
 
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" autocomplete="name" required />
+                        <label for="betreff">Betreff</label>
+                        <select id="betreff" name="betreff" required>
+                            <option value="">– Bitte wählen –</option>
+                            <option value="frage">Frage</option>
+                            <option value="feedback">Feedback</option>
+                            <option value="zusammenarbeit">
+                                Zusammenarbeit
+                            </option>
+                            <option value="sonstiges">Sonstiges</option>
+                        </select>
 
-            <label for="email">E-Mail</label>
-            <input type="email" id="email" name="email" autocomplete="email" required />
+                        <label for="nachricht">Nachricht</label>
+                        <textarea
+                            id="nachricht"
+                            name="nachricht"
+                            rows="6"
+                            required
+                        ></textarea>
 
-            <label for="betreff">Betreff</label>
-            <select id="betreff" name="betreff" required>
-              <option value="">– Bitte wählen –</option>
-              <option value="frage">Frage</option>
-              <option value="feedback">Feedback</option>
-              <option value="zusammenarbeit">Zusammenarbeit</option>
-              <option value="sonstiges">Sonstiges</option>
-            </select>
+                        <button type="submit">Absenden</button>
+                    </fieldset>
+                </form>
 
-            <label for="nachricht">Nachricht</label>
-            <textarea id="nachricht" name="nachricht" rows="6" required></textarea>
+                <p id="kontakt-status" role="status" aria-live="polite"></p>
+            </section>
 
-            <button type="submit">Absenden</button>
-          </fieldset>
-        </form>
+            <section aria-labelledby="newsletter-heading">
+                <h2 id="newsletter-heading">Newsletter</h2>
+                <p>Erhalte neue Artikel direkt in dein Postfach.</p>
 
-        <p id="kontakt-status" role="status" aria-live="polite"></p>
-      </section>
+                <form id="newsletter-formular" novalidate>
+                    <label for="newsletter-email">E-Mail</label>
+                    <input
+                        type="email"
+                        id="newsletter-email"
+                        name="email"
+                        autocomplete="email"
+                        required
+                    />
+                    <button type="submit">Anmelden</button>
+                </form>
 
-      <section aria-labelledby="newsletter-heading">
-        <h2 id="newsletter-heading">Newsletter</h2>
-        <p>Erhalte neue Artikel direkt in dein Postfach.</p>
+                <p id="newsletter-status" role="status" aria-live="polite"></p>
+            </section>
+        </main>
 
-        <form id="newsletter-formular" novalidate>
-          <label for="newsletter-email">E-Mail</label>
-          <input type="email" id="newsletter-email" name="email" autocomplete="email" required />
-          <button type="submit">Anmelden</button>
-        </form>
+        <footer>
+            <p>&copy; 2025 MeinBlog</p>
+            <nav aria-label="Footer-Navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="themen.html">Themen</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </nav>
+        </footer>
 
-        <p id="newsletter-status" role="status" aria-live="polite"></p>
-      </section>
-
-    </main>
-
-    <footer>
-      <p>&copy; 2025 MeinBlog</p>
-      <nav aria-label="Footer-Navigation">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="themen.html">Themen</a></li>
-          <li><a href="kontakt.html">Kontakt</a></li>
-        </ul>
-      </nav>
-    </footer>
-
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/newsletter.js"></script>
-  </body>
+        <script src="assets/js/main.js"></script>
+        <script src="assets/js/newsletter.js"></script>
+    </body>
 </html>
