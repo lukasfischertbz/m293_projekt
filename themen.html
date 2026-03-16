@@ -8,40 +8,54 @@
             content="Alle Themen und Artikel im Überblick."
         />
         <title>Blog – Themen</title>
-        <script type="module" src="assets/js/cssLoader.js"></script>
+        <link rel="stylesheet" href="assets/css/styles.css" />
     </head>
     <body data-page="themen">
         <header>
-            <a href="index.html" class="logo">MeinBlog</a>
-            <nav aria-label="Hauptnavigation">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li>
-                        <a href="themen.html" aria-current="page">Themen</a>
-                    </li>
-                    <li><a href="kontakt.html">Kontakt</a></li>
-                </ul>
-            </nav>
+            <h1 class="page-title">MeinBlog</h1>
         </header>
 
         <main>
             <section aria-labelledby="themen-heading">
-                <h1 id="themen-heading">Themen</h1>
+                    <!-- Visually hidden heading for accessibility -->
+                    <h1 id="themen-heading" class="sr-only">Themen</h1>
+                <section id="menu-card" class="menu-card">
+                    <div class="menu-card__header">MENÜ</div>
+                    <div class="menu-card__buttons">
+                        <button type="button" class="menu-card__button" data-view="topics" aria-pressed="true">
+                            AKTUELLE THEMEN
+                        </button>
+                        <button type="button" class="menu-card__button" data-view="stats" aria-pressed="false">
+                            STATISTIKEN
+                        </button>
+                    </div>
+                </section>
 
-                <nav aria-label="Kategorien filtern">
-                    <ul id="kategorie-filter" role="list">
-                        <li>
-                            <button data-kategorie="alle" aria-pressed="true">
-                                Alle
-                            </button>
-                        </li>
-                        <!-- weitere Kategorien per JS -->
+                <section class="themen-view" data-view="topics">
+                    <nav aria-label="Kategorien filtern">
+                        <ul id="kategorie-filter" role="list">
+                            <li>
+                                <button data-kategorie="alle" aria-pressed="true">
+                                    Alle
+                                </button>
+                            </li>
+                            <!-- weitere Kategorien per JS -->
+                        </ul>
+                    </nav>
+
+                    <ul id="artikel-liste">
+                        <!-- wird per JS befüllt -->
                     </ul>
-                </nav>
+                </section>
 
-                <div id="artikel-liste" role="list">
-                    <!-- wird per JS befüllt -->
-                </div>
+                <section class="themen-view" data-view="stats" hidden>
+                    <h2>Statistiken</h2>
+                    <ul class="stats-list">
+                        <li>Artikel: <span id="stat-artikel-count">–</span></li>
+                        <li>Kategorien: <span id="stat-kategorien-count">–</span></li>
+                        <li>Autoren: <span id="stat-autoren-count">–</span></li>
+                    </ul>
+                </section>
             </section>
         </main>
 
@@ -55,6 +69,8 @@
                 </ul>
             </nav>
         </footer>
+
+
 
         <script src="assets/js/main.js"></script>
     </body>

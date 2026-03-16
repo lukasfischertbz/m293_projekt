@@ -19,17 +19,18 @@ function getArtikelId() {
 function renderArtikelKarte(artikel, autor, kategorie) {
   const li = document.createElement("li");
   li.setAttribute("role", "listitem");
+  li.className = "artikel-card";
+
+  const image = artikel.inhalt?.find((block) => block.type === "img")?.content;
 
   li.innerHTML = `
-    <article>
-      <header>
-        <h3><a href="artikel.html?id=${artikel.id}">${artikel.titel}</a></h3>
-        <p>
-          <time datetime="${artikel.datum}">${formatDatum(artikel.datum)}</time>
-          · <span>${autor ? autor.name : "Unbekannt"}</span>
-          · <span>${kategorie ? kategorie.name : "Keine Kategorie"}</span>
-        </p>
-      </header>
+    <article class="artikel">
+      <div class="artikel-image">
+        ${image ? `<img src="${image}" alt="" />` : "<div class=\"artikel-image--placeholder\"></div>"}
+      </div>
+      <div class="artikel-title">
+        <a href="artikel.html?id=${artikel.id}">${artikel.titel}</a>
+      </div>
     </article>
   `;
 
@@ -67,13 +68,41 @@ async function initHome() {
 async function initThemen() {
   const liste = document.getElementById("artikel-liste");
   const filterNav = document.getElementById("kategorie-filter");
-  if (!liste || !filterNav) return;
+  const menuButtons = document.querySelectorAll(".menu-card__button");
+  const themenViews = document.querySelectorAll(".themen-view");
+  const statArtikelCount = document.getElementById("stat-artikel-count");
+  const statKategorienCount = document.getElementById("stat-kategorien-count");
+  const statAutorenCount = document.getElementById("stat-autoren-count");
+
+  if (!liste || !filterNav || menuButtons.length === 0 || themenViews.length === 0) return;
 
   const [artikel, authors, kategorien] = await Promise.all([
     loadJSON("data/artikel.json"),
     loadJSON("data/authors.json"),
     loadJSON("data/kategorien.json"),
   ]);
+
+  // Statistik-Daten füllen
+  if (statArtikelCount) statArtikelCount.textContent = String(artikel.length);
+  if (statKategorienCount) statKategorienCount.textContent = String(kategorien.length);
+  if (statAutorenCount) statAutorenCount.textContent = String(authors.length);
+
+  function setView(view) {
+    themenViews.forEach((section) => {
+      section.hidden = section.dataset.view !== view;
+    });
+
+    menuButtons.forEach((btn) => {
+      const active = btn.dataset.view === view;
+      btn.setAttribute("aria-pressed", active ? "true" : "false");
+    });
+  }
+
+  menuButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      setView(btn.dataset.view);
+    });
+  });
 
   // Kategorien-Buttons rendern
   for (const k of kategorien) {
@@ -109,6 +138,9 @@ async function initThemen() {
     btn.setAttribute("aria-pressed", "true");
     renderListe(btn.dataset.kategorie);
   });
+
+  // Standardansicht
+  setView("topics");
 }
 
 async function initArtikel() {
@@ -162,6 +194,9 @@ async function initArtikel() {
   document.title = `Blog – ${a.titel}`;
 }
 
+
+
+
 // Seite erkennen und initialisieren
 const seite = document.body.closest("[data-page]")?.dataset.page
   ?? location.pathname.split("/").pop().replace(".html", "") || "index";
@@ -169,3 +204,4 @@ const seite = document.body.closest("[data-page]")?.dataset.page
 if (seite === "index" || seite === "") initHome();
 else if (seite === "themen") initThemen();
 else if (seite === "artikel") initArtikel();
+
