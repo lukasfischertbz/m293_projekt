@@ -3,59 +3,36 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta
-            name="description"
-            content="Ein Blog über Technologie, Wissenschaft und Alltag."
-        />
         <title>Blog – Home</title>
         <link rel="stylesheet" href="assets/css/styles.css" />
     </head>
     <body data-page="index">
-        <header>
-            <h1 class="page-title">MeinBlog</h1>
+        <header class="header">
+            <div class="header-inner">
+                <span class="header-title">MeinBlog</span>
+                <nav class="header-nav">
+                    <a href="index.html">START</a>
+                    <a href="themen.html">THEMEN</a>
+                </nav>
+            </div>
         </header>
 
-        <section id="menu-card" class="menu-card">
-            <div class="menu-card__header">MENÜ</div>
-            <div class="menu-card__buttons">
-                <button type="button" class="menu-card__button" onclick="location.href='index.html'">
-                    START
-                </button>
-                <button type="button" class="menu-card__button" onclick="location.href='themen.html'">
-                    THEMEN
-                </button>
+        <div class="page">
+            <div class="page-labels">
+                <div class="label-themen">AKTUELLE THEMEN</div>
+                <div class="label-stat">
+                    <span id="stat-count">—</span>
+                    <span>ARTIKEL</span>
+                </div>
             </div>
-        </section>
+            <ul id="artikel-liste" class="artikel-liste"></ul>
+        </div>
 
-        <main>
-            <ul id="artikel-liste">
-                <!-- wird per JS befüllt -->
-            </ul>
-
-            <template id="artikel-template">
-                <li role="listitem">
-                    <article class="artikel-card">
-                        <div class="artikel-image"></div>
-                        <div class="artikel-title">
-                            <a class="artikel-link"></a>
-                        </div>
-                    </article>
-                </li>
-            </template>
-        </main>
-
-        <footer>
-            <p>&copy; 2025 MeinBlog</p>
-            <nav aria-label="Footer-Navigation">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="themen.html">Themen</a></li>
-                    <li><a href="kontakt.html">Kontakt</a></li>
-                </ul>
-            </nav>
+        <footer class="footer">
+            <div class="footer-inner">
+                <a href="kontakt.html">KONTAKT</a>
+            </div>
         </footer>
-
-
 
         <script src="assets/js/main.js"></script>
     </body>

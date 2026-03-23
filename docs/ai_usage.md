@@ -118,3 +118,14 @@ Die KI hat nie eine Perfekte Antwort ausgegeben aber war hilfreich so das ich es
 ## Responsive Design
 
 Ich habe Wireframes erstellt und Github Copilot (raptor mini) gefragt das Projekt an die Bilder anzupassen.
+
+Es ist nicht möglich Github Compilot Gespräche zu exportieren.
+![](image.png)
+
+Ich habe Claude gefragt das Projekt anzupassen.
+
+![Ganzer Chat](docs/ai_chat_index.html)
+
+Ich habe ChatGPT gefragt Beispieldaten zu generrieren.
+
+![Ganzer Chat](docs/ai_chat_data.html)

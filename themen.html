@@ -1,77 +1,43 @@
 <!doctype html>
 <html lang="de">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta
-            name="description"
-            content="Alle Themen und Artikel im Überblick."
-        />
-        <title>Blog – Themen</title>
-        <link rel="stylesheet" href="assets/css/styles.css" />
-    </head>
-    <body data-page="themen">
-        <header>
-            <h1 class="page-title">MeinBlog</h1>
-        </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Übersicht über die Themen." />
+    <title>Blog – Themen</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__title">TITEL</div>
+      <nav class="header__nav">
+        <a class="header__nav-item" href="index.html">START</a>
+        <a class="header__nav-item" href="themen.html">THEMEN</a>
+      </nav>
+    </header>
 
-        <main>
-            <section aria-labelledby="themen-heading">
-                    <!-- Visually hidden heading for accessibility -->
-                    <h1 id="themen-heading" class="sr-only">Themen</h1>
-                <section id="menu-card" class="menu-card">
-                    <div class="menu-card__header">MENÜ</div>
-                    <div class="menu-card__buttons">
-                        <button type="button" class="menu-card__button" data-view="topics" aria-pressed="true">
-                            AKTUELLE THEMEN
-                        </button>
-                        <button type="button" class="menu-card__button" data-view="stats" aria-pressed="false">
-                            STATISTIKEN
-                        </button>
-                    </div>
-                </section>
+    <section class="menu">
+      <div class="menu__title">MENÜ</div>
+      <div class="menu__item">THEMA AUSWAHL</div>
+    </section>
 
-                <section class="themen-view" data-view="topics">
-                    <nav aria-label="Kategorien filtern">
-                        <ul id="kategorie-filter" role="list">
-                            <li>
-                                <button data-kategorie="alle" aria-pressed="true">
-                                    Alle
-                                </button>
-                            </li>
-                            <!-- weitere Kategorien per JS -->
-                        </ul>
-                    </nav>
+    <main class="content">
+      <section class="card">
+        <div class="card__image"></div>
+        <div class="card__label">THEMA 1</div>
+      </section>
+      <section class="card">
+        <div class="card__image"></div>
+        <div class="card__label">THEMA 2</div>
+      </section>
+      <section class="card">
+        <div class="card__image"></div>
+        <div class="card__label">THEMA 3</div>
+      </section>
+    </main>
 
-                    <ul id="artikel-liste">
-                        <!-- wird per JS befüllt -->
-                    </ul>
-                </section>
-
-                <section class="themen-view" data-view="stats" hidden>
-                    <h2>Statistiken</h2>
-                    <ul class="stats-list">
-                        <li>Artikel: <span id="stat-artikel-count">–</span></li>
-                        <li>Kategorien: <span id="stat-kategorien-count">–</span></li>
-                        <li>Autoren: <span id="stat-autoren-count">–</span></li>
-                    </ul>
-                </section>
-            </section>
-        </main>
-
-        <footer>
-            <p>&copy; 2025 MeinBlog</p>
-            <nav aria-label="Footer-Navigation">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="themen.html">Themen</a></li>
-                    <li><a href="kontakt.html">Kontakt</a></li>
-                </ul>
-            </nav>
-        </footer>
-
-
-
-        <script src="assets/js/main.js"></script>
-    </body>
+    <footer class="footer">
+      <div class="footer__item">KONTAKT</div>
+    </footer>
+  </body>
 </html>

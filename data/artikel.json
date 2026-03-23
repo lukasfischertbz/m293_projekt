@@ -1,60 +1,232 @@
 [
   {
-    "id": "1",
-    "titel": "GitHub Pages – Webseiten kostenlos hosten",
-    "kategorie_id": "1",
-    "datum": "2025-03-01",
-    "autor_id": "1",
+    "id": "7",
+    "titel": "Die Golden Hour – Warum Fotografen dieses Licht lieben",
+    "kategorie_id": "2",
+    "datum": "2025-03-13",
+    "autor_id": "3",
     "inhalt": [
       {
         "type": "text",
-        "content": "GitHub Pages ist ein kostenloser Hosting-Dienst von GitHub, mit dem du statische Webseiten direkt aus einem Repository veröffentlichen kannst."
-      },
-      {
-        "type": "img",
-        "content": "assets/img/github-pages.jpg"
+        "content": "Die sogenannte Golden Hour gehört zu den beliebtesten Zeiten für Fotografen weltweit. Sie beschreibt die Phase kurz nach Sonnenaufgang und kurz vor Sonnenuntergang, in der das Licht besonders weich und warm ist."
       },
       {
         "type": "text",
-        "content": "Alles was du brauchst ist ein GitHub-Account und ein Repository. Nach wenigen Klicks ist deine Seite unter username.github.io erreichbar."
+        "content": "In dieser Zeit entstehen kaum harte Schatten, und die Farben wirken deutlich natürlicher und angenehmer. Porträts profitieren besonders davon, da Hauttöne weicher erscheinen und das gesamte Bild harmonischer wirkt."
+      },
+      {
+        "type": "img",
+        "content": "assets/img/foto2.jpg"
+      },
+      {
+        "type": "text",
+        "content": "Ein weiterer Vorteil ist die Richtung des Lichts. Da die Sonne tief steht, entstehen lange Schatten und spannende Kontraste, die Bildern mehr Tiefe verleihen."
+      },
+      {
+        "type": "text",
+        "content": "Wer die Golden Hour optimal nutzen möchte, sollte seine Shootings im Voraus planen. Apps und Wetterdienste helfen dabei, den perfekten Zeitpunkt zu bestimmen."
+      },
+      {
+        "type": "text",
+        "content": "Auch Landschaftsfotografen profitieren enorm von dieser Lichtstimmung. Berge, Städte oder Felder wirken in warmem Licht oft deutlich eindrucksvoller als bei neutralem Tageslicht."
       }
     ]
   },
   {
-    "id": "2",
-    "titel": "Web APIs – Was steckt dahinter?",
-    "kategorie_id": "1",
-    "datum": "2025-03-05",
+    "id": "8",
+    "titel": "Street Photography – Die Kunst des Augenblicks",
+    "kategorie_id": "2",
+    "datum": "2025-03-14",
+    "autor_id": "1",
+    "inhalt": [
+      {
+        "type": "text",
+        "content": "Street Photography ist eine der ehrlichsten Formen der Fotografie. Sie zeigt das echte Leben – ungefiltert, spontan und oft überraschend."
+      },
+      {
+        "type": "text",
+        "content": "Im Gegensatz zu inszenierten Shootings geht es hier darum, den richtigen Moment zu erkennen. Geduld und Aufmerksamkeit sind entscheidend."
+      },
+      {
+        "type": "img",
+        "content": "assets/img/foto3.jpg"
+      },
+      {
+        "type": "text",
+        "content": "Viele Fotografen nutzen kleine, unauffällige Kameras, um natürliche Situationen einzufangen. So bleiben Menschen authentisch und reagieren nicht auf die Kamera."
+      },
+      {
+        "type": "text",
+        "content": "Auch Licht und Schatten spielen eine große Rolle. Besonders in Städten entstehen durch Gebäude interessante Kontraste und Linien."
+      },
+      {
+        "type": "text",
+        "content": "Street Photography erfordert Mut, da man oft fremde Menschen fotografiert. Mit Respekt und Feingefühl lassen sich jedoch beeindruckende Geschichten festhalten."
+      }
+    ]
+  },
+  {
+    "id": "9",
+    "titel": "Musik und Emotion – Warum uns Songs so tief berühren",
+    "kategorie_id": "3",
+    "datum": "2025-03-16",
     "autor_id": "2",
     "inhalt": [
       {
         "type": "text",
-        "content": "Eine Web API (Application Programming Interface) ermöglicht die Kommunikation zwischen verschiedenen Anwendungen über das Internet."
+        "content": "Musik hat die einzigartige Fähigkeit, Emotionen auszulösen. Ein bestimmter Song kann Erinnerungen wecken, die wir längst vergessen glaubten."
       },
       {
         "type": "text",
-        "content": "Bekannte Beispiele sind die Fetch API im Browser oder REST APIs für Likes und Kommentare – genau wie in diesem Blog."
+        "content": "Das liegt daran, dass Musik verschiedene Bereiche im Gehirn gleichzeitig anspricht – insbesondere jene, die für Emotionen und Erinnerungen zuständig sind."
       },
       {
         "type": "img",
-        "content": "assets/img/web-api.jpg"
+        "content": "assets/img/music2.jpg"
+      },
+      {
+        "type": "text",
+        "content": "Melodien, Rhythmen und Texte wirken zusammen und erzeugen eine emotionale Reaktion. Deshalb kann ein Song gleichzeitig traurig und schön sein."
+      },
+      {
+        "type": "text",
+        "content": "Viele Menschen nutzen Musik bewusst, um ihre Stimmung zu beeinflussen – sei es zur Entspannung, Motivation oder Verarbeitung von Gefühlen."
+      },
+      {
+        "type": "text",
+        "content": "Diese emotionale Verbindung macht Musik zu einem wichtigen Teil unseres Alltags und unserer Identität."
       }
     ]
   },
   {
-    "id": "3",
-    "titel": "Warum HTML-Semantik so wichtig ist",
-    "kategorie_id": "1",
-    "datum": "2025-03-09",
+    "id": "10",
+    "titel": "Vom Hobby zum Künstler – Wege in die Musikbranche",
+    "kategorie_id": "3",
+    "datum": "2025-03-17",
+    "autor_id": "4",
+    "inhalt": [
+      {
+        "type": "text",
+        "content": "Der Traum, mit Musik Geld zu verdienen, ist für viele Menschen attraktiv. Doch der Weg dorthin hat sich stark verändert."
+      },
+      {
+        "type": "text",
+        "content": "Früher war ein Plattenvertrag fast unverzichtbar. Heute können Künstler ihre Musik selbst veröffentlichen und über Plattformen weltweit verbreiten."
+      },
+      {
+        "type": "img",
+        "content": "assets/img/music3.jpg"
+      },
+      {
+        "type": "text",
+        "content": "Social Media ist dabei ein entscheidender Faktor. Wer es schafft, Aufmerksamkeit zu erzeugen, kann sich schnell eine Fanbase aufbauen."
+      },
+      {
+        "type": "text",
+        "content": "Dennoch erfordert Erfolg Disziplin, Kreativität und Durchhaltevermögen. Die Konkurrenz ist groß und die Aufmerksamkeitsspanne des Publikums gering."
+      },
+      {
+        "type": "text",
+        "content": "Langfristig erfolgreich sind meist jene, die ihren eigenen Stil entwickeln und authentisch bleiben."
+      }
+    ]
+  },
+  {
+    "id": "11",
+    "titel": "Joggen für Anfänger – Der richtige Start",
+    "kategorie_id": "4",
+    "datum": "2025-03-19",
     "autor_id": "1",
     "inhalt": [
       {
         "type": "text",
-        "content": "Semantisches HTML bedeutet, die richtigen HTML-Elemente für den richtigen Zweck zu verwenden. Ein nav ist ein nav – kein div."
+        "content": "Joggen ist eine der einfachsten Möglichkeiten, fit zu werden. Dennoch machen viele Anfänger den Fehler, zu schnell zu starten."
       },
       {
         "type": "text",
-        "content": "Suchmaschinen, Screenreader und andere Tools verstehen die Struktur deiner Seite besser, wenn du semantische Elemente wie header, main, article, section und footer verwendest."
+        "content": "Wichtig ist ein langsamer Einstieg. Kurze Laufeinheiten im Wechsel mit Gehen sind ideal, um den Körper zu gewöhnen."
+      },
+      {
+        "type": "img",
+        "content": "assets/img/sport2.jpg"
+      },
+      {
+        "type": "text",
+        "content": "Auch die richtige Ausrüstung spielt eine Rolle. Gute Laufschuhe können Verletzungen vorbeugen und den Komfort erhöhen."
+      },
+      {
+        "type": "text",
+        "content": "Mit der Zeit lassen sich Distanz und Tempo steigern. Geduld ist dabei der Schlüssel zum Erfolg."
+      },
+      {
+        "type": "text",
+        "content": "Wer regelmäßig läuft, wird schnell Fortschritte merken – sowohl körperlich als auch mental."
+      }
+    ]
+  },
+  {
+    "id": "12",
+    "titel": "Die mentale Stärke im Sport",
+    "kategorie_id": "4",
+    "datum": "2025-03-20",
+    "autor_id": "2",
+    "inhalt": [
+      {
+        "type": "text",
+        "content": "Sport ist nicht nur körperlich anspruchsvoll, sondern auch eine mentale Herausforderung. Motivation und Disziplin spielen eine zentrale Rolle."
+      },
+      {
+        "type": "text",
+        "content": "Viele Erfolge im Sport hängen davon ab, wie gut man mit Rückschlägen umgehen kann."
+      },
+      {
+        "type": "img",
+        "content": "assets/img/sport3.jpg"
+      },
+      {
+        "type": "text",
+        "content": "Mentale Stärke lässt sich trainieren – durch Routinen, Zielsetzung und positives Denken."
+      },
+      {
+        "type": "text",
+        "content": "Sport hilft gleichzeitig dabei, Selbstvertrauen aufzubauen und die eigene Belastbarkeit zu erhöhen."
+      },
+      {
+        "type": "text",
+        "content": "Diese Fähigkeiten wirken sich oft auch positiv auf andere Lebensbereiche aus."
+      }
+    ]
+  },
+  {
+    "id": "13",
+    "titel": "Smartphone-Fotografie – Mehr als nur Schnappschüsse",
+    "kategorie_id": "2",
+    "datum": "2025-03-21",
+    "autor_id": "3",
+    "inhalt": [
+      {
+        "type": "text",
+        "content": "Moderne Smartphones haben die Fotografie revolutioniert. Noch nie war es so einfach, hochwertige Bilder aufzunehmen."
+      },
+      {
+        "type": "text",
+        "content": "Viele Geräte verfügen über mehrere Kameras, KI-Unterstützung und leistungsstarke Bildbearbeitung direkt im Gerät."
+      },
+      {
+        "type": "img",
+        "content": "assets/img/foto4.jpg"
+      },
+      {
+        "type": "text",
+        "content": "Dennoch gelten die gleichen Grundlagen wie bei klassischen Kameras: Licht, Komposition und Perspektive sind entscheidend."
+      },
+      {
+        "type": "text",
+        "content": "Wer bewusst fotografiert, kann auch mit dem Smartphone beeindruckende Ergebnisse erzielen."
+      },
+      {
+        "type": "text",
+        "content": "Die beste Kamera ist am Ende immer die, die man dabei hat – und das ist heute fast immer das Smartphone."
       }
     ]
   }

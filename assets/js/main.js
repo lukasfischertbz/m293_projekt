@@ -1,8 +1,3 @@
-/**
- * main.js
- * Lädt JSON-Daten und rendert Artikel je nach Seite.
- */
-
 const BASE = new URL(".", document.baseURI).href;
 
 async function loadJSON(path) {
@@ -16,22 +11,19 @@ function getArtikelId() {
   return params.get("id");
 }
 
-function renderArtikelKarte(artikel, autor, kategorie) {
+function renderArtikelKarte(artikel) {
   const li = document.createElement("li");
-  li.setAttribute("role", "listitem");
-  li.className = "artikel-card";
-
   const image = artikel.inhalt?.find((block) => block.type === "img")?.content;
 
   li.innerHTML = `
-    <article class="artikel">
+    <div class="artikel-card">
       <div class="artikel-image">
-        ${image ? `<img src="${image}" alt="" />` : "<div class=\"artikel-image--placeholder\"></div>"}
+        ${image ? `<img src="${image}" alt="" />` : '<div class="artikel-image--placeholder"></div>'}
       </div>
       <div class="artikel-title">
         <a href="artikel.html?id=${artikel.id}">${artikel.titel}</a>
       </div>
-    </article>
+    </div>
   `;
 
   return li;
@@ -47,6 +39,7 @@ function formatDatum(datum) {
 
 async function initHome() {
   const liste = document.getElementById("artikel-liste");
+  const statCount = document.getElementById("stat-count");
   if (!liste) return;
 
   const [artikel, authors, kategorien] = await Promise.all([
@@ -55,13 +48,12 @@ async function initHome() {
     loadJSON("data/kategorien.json"),
   ]);
 
-  // Neueste zuerst
+  if (statCount) statCount.textContent = String(artikel.length);
+
   const sortiert = [...artikel].sort((a, b) => new Date(b.datum) - new Date(a.datum));
 
   for (const a of sortiert) {
-    const autor = authors.find((au) => au.id === a.autor_id);
-    const kategorie = kategorien.find((k) => k.id === a.kategorie_id);
-    liste.appendChild(renderArtikelKarte(a, autor, kategorie));
+    liste.appendChild(renderArtikelKarte(a));
   }
 }
 
@@ -74,7 +66,7 @@ async function initThemen() {
   const statKategorienCount = document.getElementById("stat-kategorien-count");
   const statAutorenCount = document.getElementById("stat-autoren-count");
 
-  if (!liste || !filterNav || menuButtons.length === 0 || themenViews.length === 0) return;
+  if (!liste || !filterNav) return;
 
   const [artikel, authors, kategorien] = await Promise.all([
     loadJSON("data/artikel.json"),
@@ -82,7 +74,6 @@ async function initThemen() {
     loadJSON("data/kategorien.json"),
   ]);
 
-  // Statistik-Daten füllen
   if (statArtikelCount) statArtikelCount.textContent = String(artikel.length);
   if (statKategorienCount) statKategorienCount.textContent = String(kategorien.length);
   if (statAutorenCount) statAutorenCount.textContent = String(authors.length);
@@ -91,20 +82,15 @@ async function initThemen() {
     themenViews.forEach((section) => {
       section.hidden = section.dataset.view !== view;
     });
-
     menuButtons.forEach((btn) => {
-      const active = btn.dataset.view === view;
-      btn.setAttribute("aria-pressed", active ? "true" : "false");
+      btn.setAttribute("aria-pressed", btn.dataset.view === view ? "true" : "false");
     });
   }
 
   menuButtons.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      setView(btn.dataset.view);
-    });
+    btn.addEventListener("click", () => setView(btn.dataset.view));
   });
 
-  // Kategorien-Buttons rendern
   for (const k of kategorien) {
     const li = document.createElement("li");
     const btn = document.createElement("button");
@@ -122,9 +108,7 @@ async function initThemen() {
       : artikel.filter((a) => a.kategorie_id === filter);
 
     for (const a of gefiltert) {
-      const autor = authors.find((au) => au.id === a.autor_id);
-      const kategorie = kategorien.find((k) => k.id === a.kategorie_id);
-      liste.appendChild(renderArtikelKarte(a, autor, kategorie));
+      liste.appendChild(renderArtikelKarte(a));
     }
   }
 
@@ -133,13 +117,11 @@ async function initThemen() {
   filterNav.addEventListener("click", (e) => {
     const btn = e.target.closest("button");
     if (!btn) return;
-
     filterNav.querySelectorAll("button").forEach((b) => b.setAttribute("aria-pressed", "false"));
     btn.setAttribute("aria-pressed", "true");
     renderListe(btn.dataset.kategorie);
   });
 
-  // Standardansicht
   setView("topics");
 }
 
@@ -168,7 +150,6 @@ async function initArtikel() {
   const autor = authors.find((au) => au.id === a.autor_id);
   const kategorie = kategorien.find((k) => k.id === a.kategorie_id);
 
-  // Inhalt-Blöcke rendern
   const inhaltsHTML = a.inhalt
     .map((block) => {
       if (block.type === "text") return `<p>${block.content}</p>`;
@@ -190,18 +171,12 @@ async function initArtikel() {
     <section>${inhaltsHTML}</section>
   `;
 
-  // Seitentitel anpassen
   document.title = `Blog – ${a.titel}`;
 }
 
-
-
-
-// Seite erkennen und initialisieren
 const seite = document.body.closest("[data-page]")?.dataset.page
   ?? location.pathname.split("/").pop().replace(".html", "") || "index";
 
 if (seite === "index" || seite === "") initHome();
 else if (seite === "themen") initThemen();
 else if (seite === "artikel") initArtikel();
-
