@@ -21,11 +21,17 @@
 body {
     background: var(--bg);
     color: var(--text);
-    font-family: system-ui, sans-serif;
-    line-height: 1.4;
+    font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+    line-height: 1.65;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+}
+
+h1, h2, h3 {
+    font-family: "Poppins", "Segoe UI", system-ui, sans-serif;
+    font-size: 1.6rem;
+    letter-spacing: 0.03em;
 }
 
 .header {

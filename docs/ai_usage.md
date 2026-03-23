@@ -129,3 +129,9 @@ Ich habe Claude gefragt das Projekt anzupassen.
 Ich habe ChatGPT gefragt Beispieldaten zu generrieren.
 
 ![Ganzer Chat](docs/ai_chat_data.html)
+
+Ich habe Github Copilot gefragt Blogs jetzt mit den Beispieldaten anzuzeigen.
+
+Github Copilot ist fast komplett nutzlos. Ich denke ich würde mehr hinbekommen den code hier selber zu schrieben.
+
+![Ganzer Chat](docs/ai_chat_data.html)
