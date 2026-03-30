@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Blog – Home</title>
         <link rel="stylesheet" href="assets/css/styles.css" />
+        <script type="module" src="assets/js/index.js"></script>
     </head>
     <body data-page="index">
         <header class="header">
@@ -17,7 +18,7 @@
             </div>
         </header>
 
-        <div class="page">
+        <main class="page">
             <div class="page-labels">
                 <div class="label-themen">AKTUELLE THEMEN</div>
                 <div class="label-stat">
@@ -26,8 +27,7 @@
                 </div>
             </div>
             <ul id="artikel-liste" class="artikel-liste"></ul>
-            <p id="status" class="status"></p>
-        </div>
+        </main>
 
         <template id="template-artikel-card">
             <li class="artikel-card">
@@ -44,7 +44,5 @@
                 <a href="kontakt.html">KONTAKT</a>
             </div>
         </footer>
-
-        <script src="assets/js/index.js"></script>
     </body>
 </html>
