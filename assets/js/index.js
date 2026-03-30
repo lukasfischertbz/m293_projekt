@@ -24,21 +24,23 @@ if (el) el.textContent = artikel.length;
 const liste = $("artikel-liste");
 if (liste) {
   liste.replaceChildren(
-    ...byDate(artikel).map((a) => {
-      const card = tpl("template-artikel-card");
-      const link = card.querySelector("a");
-      const img = card.querySelector("img");
-      const src = firstImg(a.inhalt);
-      link.href = `artikel.html?id=${encodeURIComponent(a.id)}`;
-      link.textContent = a.titel;
-      if (img && src) {
-        img.src = src;
-        img.alt = a.titel;
-        img.hidden = false;
-        card.querySelector(".artikel-image--placeholder")?.remove();
-      }
-      return card;
-    }),
+    ...byDate(artikel)
+      .slice(0, 3)
+      .map((a) => {
+        const card = tpl("template-artikel-card");
+        const link = card.querySelector("a");
+        const img = card.querySelector("img");
+        const src = firstImg(a.inhalt);
+        link.href = `artikel.html?id=${encodeURIComponent(a.id)}`;
+        link.textContent = a.titel;
+        if (img && src) {
+          img.src = src;
+          img.alt = a.titel;
+          img.hidden = false;
+          card.querySelector(".artikel-image--placeholder")?.remove();
+        }
+        return card;
+      }),
   );
 }
 

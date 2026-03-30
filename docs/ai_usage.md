@@ -135,3 +135,7 @@ Ich habe Github Copilot gefragt Blogs jetzt mit den Beispieldaten anzuzeigen.
 Github Copilot ist fast komplett nutzlos. Ich denke ich würde mehr hinbekommen den code hier selber zu schrieben.
 
 ![Ganzer Chat](docs/ai_chat_data.html)
+
+Ich habe mit Claude das laden der Daten mit js in der Start-Setite zum laufen gebracht.
+
+![Ganzer Chat](docs/ai_index_2.html)
