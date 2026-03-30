@@ -2,8 +2,8 @@
 
 async function loadThemes() {
   try {
-    // JSON-Datei laden
-    const response = await fetch('data/themes.json');
+    // JSON-Datei laden (root-relative, so bleibt korrekt bei /themes)
+    const response = await fetch('/data/themes.json');
     
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);

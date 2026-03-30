@@ -3,5 +3,15 @@
     "id": "fotografie",
     "label": "Fotografie",
     "image": "data/img/kytkc87s6vd81.jpg"
+  },
+  {
+    "id": "musik",
+    "label": "Musik",
+    "image": "data/img/hq720.webp"
+  },
+  {
+    "id": "sport",
+    "label": "Sport",
+    "image": "data/img/69c0b880-07a9-11ef-b30f-ad1311849764.jpg"
   }
 ]
