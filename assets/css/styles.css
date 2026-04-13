@@ -236,6 +236,7 @@ h3 {
 .card {
     background: var(--surface);
     overflow: hidden;
+    cursor: pointer;
 }
 
 .card-image {
