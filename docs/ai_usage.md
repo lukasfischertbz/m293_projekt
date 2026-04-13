@@ -147,3 +147,5 @@ Ich Claude gefragt mit der Kategoreien Seite zu helfen.
 Ich in Duck.ai Claude (Haiku 4.5) gefragt mit der Kategoreien Seite zu helfen.
 
 ![Ganzer Chat](docs/ai_themes_2.html)
+
+Ich habe versucht Github Copilot zu benutzen um den Stil anzupassen aber 99% der Änderungen waren scheiße.

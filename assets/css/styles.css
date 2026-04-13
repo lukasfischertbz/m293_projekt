@@ -211,8 +211,26 @@ h3 {
     flex: 1;
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
     gap: var(--gap);
+}
+
+@media (min-width: 740px) {
+    .content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .content .card:nth-child(1) {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (min-width: 1080px) {
+    .content {
+        grid-template-columns: repeat(2, 1fr); /* max 2 Spalten im Desktop-Modus */
+    }
+    .content .card:nth-child(1) {
+        grid-column: 1 / -1;
+    }
 }
 
 .card {
