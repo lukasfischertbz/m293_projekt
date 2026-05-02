@@ -1,134 +1,96 @@
-// assets/js/themes.js
-
-const THEME_ARTICLES = {
-  fotografie: '2',
-  musik: '3',
-  sport: '4',
+const load = async (p) => {
+  const r = await fetch(p);
+  if (!r.ok) throw new Error(r.status);
+  return r.json();
 };
+const byDate = (arr) =>
+  [...arr].sort((a, b) => new Date(b.datum) - new Date(a.datum));
+const firstImg = (inhalt = []) =>
+  inhalt.find((b) => b.type === "img")?.content ?? null;
 
-const loadJson = async (path) => {
-  const url = new URL(path, location.origin).href;
-  const response = await fetch(url);
-  if (!response.ok) {
-    throw new Error(`HTTP error! status: ${response.status}`);
-  }
-  return response.json();
-};
-
-const setStatus = (text) => {
-  const status = document.getElementById('theme-status');
-  if (status) status.textContent = text;
-};
-
-const renderArticles = (articles) => {
-  const list = document.getElementById('theme-articles');
-  if (!list) return;
-
-  list.replaceChildren(
-    ...articles.map((article) => {
-      const item = document.createElement('li');
-      item.className = 'artikel-card';
-
-      const title = document.createElement('div');
-      title.className = 'artikel-title';
-
-      const link = document.createElement('a');
-      link.href = `/artikel.html?id=${encodeURIComponent(article.id)}`;
-      link.textContent = article.titel;
-
-      title.appendChild(link);
-      item.appendChild(title);
-      return item;
-    }),
-  );
-
-  if (articles.length === 0) {
-    const empty = document.createElement('li');
-    empty.textContent = 'Keine Artikel zu diesem Thema gefunden.';
-    empty.style.padding = '16px 12px';
-    list.appendChild(empty);
-  }
-};
-
-const showThemeResult = async (theme) => {
-  const themeId = theme.id;
-  const categoryId = THEME_ARTICLES[themeId];
-  if (!categoryId) {
-    setStatus('Unbekanntes Thema.');
-    return;
-  }
-
-  try {
-    setStatus(`Suche Artikel für ${theme.label}...`);
-    const artikel = await loadJson('/data/artikel.json');
-
-    const filtered = (artikel || []).filter((a) => a.kategorie_id === categoryId);
-    renderArticles(filtered);
-    setStatus(`Gefundene Artikel für ${theme.label}: ${filtered.length}`);
-
-    const resultSection = document.getElementById('theme-result');
-    const themeList = document.getElementById('theme-list');
-    if (resultSection && themeList) {
-      resultSection.hidden = false;
-      themeList.hidden = true;
-    }
-  } catch (error) {
-    console.error('Fehler beim Laden der Artikel:', error);
-    setStatus('Artikel konnten nicht geladen werden.');
-  }
-};
-
-const resetThemeView = () => {
-  const resultSection = document.getElementById('theme-result');
-  const themeList = document.getElementById('theme-list');
-  if (resultSection && themeList) {
-    resultSection.hidden = true;
-    themeList.hidden = false;
-    setStatus('Wähle ein Thema aus, um die Artikel anzuzeigen.');
-  }
-};
-
-const attachThemeClickHandlers = () => {
-  const themeCards = document.querySelectorAll('.card[data-theme-id]');
-  themeCards.forEach((card) => {
-    const themeId = card.dataset.themeId;
-    const labelEl = card.querySelector('.card-label');
-    const theme = {
-      id: themeId,
-      label: labelEl ? labelEl.textContent.trim() : themeId,
-    };
-    card.addEventListener('click', () => showThemeResult(theme));
-  });
-};
-
-async function loadThemes() {
-  attachThemeClickHandlers();
-  setStatus('Wähle ein Thema aus, um die Artikel anzuzeigen.');
-
-  try {
-    const themes = await loadJson('/data/themes.json');
-    const themeCards = document.querySelectorAll('.card[data-theme-id]');
-    themeCards.forEach((card) => {
-      const themeId = card.dataset.themeId;
-      const theme = themes.find((item) => item.id === themeId);
-      if (theme) {
-        const cardImage = card.querySelector('.card-image');
-        const label = card.querySelector('.card-label');
-        if (cardImage && theme.image) {
-          cardImage.style.backgroundImage = `url('${theme.image}')`;
-        }
-        if (label && theme.label) {
-          label.textContent = theme.label;
-        }
-      }
-    });
-  } catch (error) {
-    console.warn('Themen-Daten konnten nicht geladen werden, verwende statische Karten.', error);
-  }
-
-  const backButton = document.getElementById('back-to-themes');
-  if (backButton) backButton.addEventListener('click', resetThemeView);
+function tpl(id) {
+  return document.getElementById(id).content.firstElementChild.cloneNode(true);
 }
 
-// Themen laden, wenn die Seite vollständig geladen ist
-document.addEventListener('DOMContentLoaded', loadThemes);
+function makeEl(tag, className) {
+  const el = document.createElement(tag);
+  if (className) el.className = className;
+  return el;
+}
+
+async function showThemen(main, themes) {
+  const grid = makeEl('div', 'content');
+  themes.forEach(theme => {
+    const link = makeEl('a', 'card');
+    link.href = `?id=${encodeURIComponent(theme.id)}`;
+    const img = makeEl('div', 'card-image');
+    img.style.backgroundImage = `url('${theme.image}')`;
+    const label = makeEl('div', 'card-label');
+    label.textContent = theme.label;
+    link.appendChild(img);
+    link.appendChild(label);
+    grid.appendChild(link);
+  });
+  main.appendChild(grid);
+}
+
+async function showArtikel(main, themaId, themes, artikel) {
+  const themaIndex = themes.findIndex((t) => t.id === themaId);
+  const gefiltert = byDate(
+    artikel.filter((a) => Number(a.kategorie_id) - 1 === themaIndex)
+  );
+
+  const back = makeEl('button', 'back-btn');
+  back.textContent = '← Zurück';
+  back.addEventListener('click', () => history.back());
+  main.appendChild(back);
+
+  const titel = makeEl('div', 'label-themen');
+  titel.textContent = themes[themaIndex]?.label ?? '';
+  main.appendChild(titel);
+
+  const liste = makeEl('ul', 'artikel-liste');
+
+  if (gefiltert.length === 0) {
+    const li = makeEl('li');
+    li.style.padding = '20px';
+    li.textContent = 'Keine Artikel gefunden.';
+    liste.appendChild(li);
+  } else {
+    gefiltert.forEach((a) => {
+      const card = tpl('template-artikel-card');
+      const href = `artikel.html?id=${encodeURIComponent(a.id)}`;
+      const link = card.querySelector('a');
+      link.href = href;
+      link.textContent = a.titel;
+      card.style.cursor = 'pointer';
+      card.addEventListener('click', () => { location.href = href; });
+      const img = card.querySelector('img');
+      const src = firstImg(a.inhalt);
+      if (img && src) {
+        img.src = src;
+        img.alt = a.titel;
+        img.hidden = false;
+        card.querySelector('.artikel-image--placeholder')?.remove();
+      }
+      liste.appendChild(card);
+    });
+  }
+
+  main.appendChild(liste);
+}
+
+document.addEventListener('DOMContentLoaded', async () => {
+  const main = document.querySelector('.themen-main');
+  const [themes, artikel] = await Promise.all([
+    load('data/themes.json'),
+    load('data/artikel.json'),
+  ]);
+  const themaId = new URLSearchParams(location.search).get('id');
+  if (themaId) {
+    await showArtikel(main, themaId, themes, artikel);
+  } else {
+    await showThemen(main, themes);
+  }
+});
+

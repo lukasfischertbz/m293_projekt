@@ -1,9 +1,3 @@
-/**
- * newsletter.js
- * Formular-Handler für Kontakt und Newsletter.
- * Später: echte API-Aufrufe ersetzen die console.log-Platzhalter.
- */
-
 function initKontaktFormular() {
   const form = document.getElementById("kontakt-formular");
   const status = document.getElementById("kontakt-status");
@@ -24,7 +18,6 @@ function initKontaktFormular() {
       return;
     }
 
-    // TODO: POST an API
     console.log("Kontakt-Formular:", data);
     status.textContent = "Danke! Deine Nachricht wurde gesendet.";
     form.reset();
@@ -46,12 +39,13 @@ function initNewsletterFormular() {
       return;
     }
 
-    // TODO: POST an API
     console.log("Newsletter-Anmeldung:", email);
     status.textContent = "Du wurdest erfolgreich angemeldet!";
     form.reset();
   });
 }
 
-initKontaktFormular();
-initNewsletterFormular();
+document.addEventListener("DOMContentLoaded", () => {
+  initKontaktFormular();
+  initNewsletterFormular();
+});

@@ -7,34 +7,46 @@
     <title>Blog – Kontakt</title>
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
-  <body>
+  <body data-page="kontakt">
     <header class="header">
-      <div class="header-title">TITEL</div>
-      <nav class="header-nav">
-        <a class="header-nav-item" href="index.html">START</a>
-        <a class="header-nav-item" href="themen.html">THEMEN</a>
-      </nav>
+      <div class="header-inner">
+        <span class="header-title">MeinBlog</span>
+        <nav class="header-nav">
+          <a href="index.html">START</a>
+          <a href="themes.html">THEMEN</a>
+        </nav>
+      </div>
     </header>
-
-    <section class="menu">
-      <div class="menu-title">MENÜ</div>
-      <div class="menu-item">KONTAKT</div>
-    </section>
 
     <main class="content">
       <section class="card">
-        <div class="card-label">NACHRICHT</div>
+        <div class="card-label">KONTAKT</div>
+        <form id="kontakt-formular">
+          <input type="text" name="name" placeholder="Name" required />
+          <input type="email" name="email" placeholder="E-Mail" required />
+          <input type="text" name="betreff" placeholder="Betreff" required />
+          <textarea name="nachricht" placeholder="Nachricht" required></textarea>
+          <button type="submit">Senden</button>
+        </form>
+        <div id="kontakt-status"></div>
       </section>
+
       <section class="card">
-        <div class="card-label">KONTAKTDATEN</div>
-      </section>
-      <section class="card">
-        <div class="card-label">SENDEN</div>
+        <div class="card-label">NEWSLETTER</div>
+        <form id="newsletter-formular">
+          <input type="email" name="email" placeholder="E-Mail-Adresse" required />
+          <button type="submit">Anmelden</button>
+        </form>
+        <div id="newsletter-status"></div>
       </section>
     </main>
 
     <footer class="footer">
-      <div class="footer-item">KONTAKT</div>
+      <div class="footer-inner">
+        <a href="kontakt.html">KONTAKT</a>
+      </div>
     </footer>
+
+    <script src="assets/js/newsletter.js"></script>
   </body>
 </html>
