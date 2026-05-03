@@ -103,5 +103,92 @@
       { "type": "text", "content": "Wer bewusst fotografiert, kann auch mit dem Smartphone beeindruckende Ergebnisse erzielen." },
       { "type": "text", "content": "Die beste Kamera ist am Ende immer die, die man dabei hat – und das ist heute fast immer das Smartphone." }
     ]
+  },
+  {
+    "id": "sport-klettern",
+    "titel": "Klettern im Tessin: Granit, Sonne und stille Täler",
+    "datum": "2024-10-08",
+    "autor_id": "3",
+    "kategorie_id": "sport",
+    "inhalt": [
+      {
+        "type": "img",
+        "content": "data/img/seb_bouin_dna-3976326577.jpg"
+      },
+      {
+        "type": "text",
+        "content": "Das Tessin ist für Schweizer Klettererinnen und Kletterer ein Mekka. Das Valle Verzasca und das Maggiatal bieten atemberaubende Granitfelsen, glasklare Bergbäche und mediterrane Vegetation."
+      },
+      {
+        "type": "text",
+        "content": "Die Region bietet Routen für alle Schwierigkeitsgrade – von leichten Mehrseillängentouren für Einsteiger bis zu anspruchsvollen Sportkletterrouten im obersten Grad. Besonders beliebt ist das Gebiet um Ponte Brolla."
+      },
+      {
+        "type": "video",
+        "content": "https://www.youtube.com/embed/6d7gT3rCRs4"
+      },
+      {
+        "type": "text",
+        "content": "Wer ins Tessin klettert, sollte die lokalen Hütten kennen. Die Tessiner Gastfreundschaft, kombiniert mit hervorragender Küche – Polenta, Risotto, lokale Weine – macht aus einem Klettertrip einen unvergesslichen Urlaub."
+      }
+    ]
+  },
+  {
+    "id": "fotografie-strasse",
+    "titel": "Strassenfotografie in Zürich: Die Stadt als Bühne",
+    "datum": "2024-09-25",
+    "autor_id": "1",
+    "kategorie_id": "fotografie",
+    "inhalt": [
+      {
+        "type": "img",
+        "content": "data/img/polaroid-camera-1980s-CNFNB7-147761806.jpg"
+      },
+      {
+        "type": "text",
+        "content": "Zürich ist keine Stadt, die sich aufdrängt. Aber wer genau hinschaut – mit einer Kamera durch die Gassen des Langstrassen-Quartiers schlenddert oder früh morgens den Hauptbahnhof besucht – entdeckt eine Stadt voller Kontraste und Charaktere."
+      },
+      {
+        "type": "img",
+        "content": "data/img/PANASONIC-LUMIX-FZ1000-II-1757860653.png"
+      },
+      {
+        "type": "text",
+        "content": "Strassenfotografie ist die demokratischste aller Kunstformen: kein Studio, kein Budget, kein eingerichtetes Licht – nur eine Kamera, Geduld und die Bereitschaft, das Unerwartete zu begrüssen. Henri Cartier-Bresson nannte es den entscheidenden Augenblick."
+      },
+      {
+        "type": "video",
+        "content": "https://www.youtube.com/embed/3NMqGSHfCZo"
+      }
+    ]
+  },
+  {
+    "id": "musik-vinyl",
+    "titel": "Die Rückkehr der Schallplatte: Warum Vinyl wieder boomt",
+    "datum": "2024-12-01",
+    "autor_id": "2",
+    "kategorie_id": "musik",
+    "inhalt": [
+      {
+        "type": "img",
+        "content": "data/img/music3.png"
+      },
+      {
+        "type": "text",
+        "content": "Schallplatten galten als Relikt der Vergangenheit – bis sie plötzlich wieder überall sind. Seit 2007 steigen die Vinyl-Verkaufszahlen kontinuierlich. 2023 wurden in der Schweiz mehr Schallplatten verkauft als seit Jahrzehnten."
+      },
+      {
+        "type": "text",
+        "content": "Audiophile schwören auf den warmen, analogen Klang, den digitale Formate nicht replizieren können. Das leichte Knistern der Nadel ist für viele Hörerinnen und Hörer kein Bug, sondern ein Feature – Authentizität in einer digitalisierten Welt."
+      },
+      {
+        "type": "video",
+        "content": "https://www.youtube.com/embed/OvbMFMa8Z4Q"
+      },
+      {
+        "type": "text",
+        "content": "Vinyl bedeutet auch Ritual: Das bewusste Auswählen einer Platte, das Herausnehmen aus der Hülle, das Aufsetzen der Nadel – all das zwingt zur Langsamkeit. Ein Gegenmodell zur Streaming-Welt, das viele Menschen bewusst suchen."
+      }
+    ]
   }
 ]

@@ -75,6 +75,12 @@ if (container) {
         fig.querySelector("img").alt = a.titel;
         content.appendChild(fig);
       }
+      if (block.type === "video") {
+        const wrap = tpl("template-video");
+        wrap.querySelector("iframe").src = block.content;
+        wrap.querySelector("iframe").title = a.titel;
+        content.appendChild(wrap);
+      }
     });
     container.replaceChildren(detail);
   }

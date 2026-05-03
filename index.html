@@ -27,6 +27,16 @@
                 </div>
             </div>
             <ul id="artikel-liste" class="artikel-liste"></ul>
+
+            <section class="newsletter-strip">
+                <h2>Newsletter</h2>
+                <p>Bleib auf dem Laufenden – neue Artikel direkt in dein Postfach.</p>
+                <form id="newsletter-formular">
+                    <input type="email" name="email" placeholder="E-Mail-Adresse" required />
+                    <button type="submit">Anmelden</button>
+                </form>
+                <div id="newsletter-status"></div>
+            </section>
         </main>
 
         <template id="template-artikel-card">
@@ -44,5 +54,7 @@
                 <a href="kontakt.html">KONTAKT</a>
             </div>
         </footer>
+
+        <script src="assets/js/newsletter.js"></script>
     </body>
 </html>

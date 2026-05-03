@@ -24,7 +24,14 @@
         <form id="kontakt-formular">
           <input type="text" name="name" placeholder="Name" required />
           <input type="email" name="email" placeholder="E-Mail" required />
-          <input type="text" name="betreff" placeholder="Betreff" required />
+          <select name="betreff" required>
+            <option value="" disabled selected>Betreff wählen</option>
+            <option value="frage">Allgemeine Frage</option>
+            <option value="feedback">Feedback</option>
+            <option value="zusammenarbeit">Zusammenarbeit</option>
+            <option value="fehler">Fehler melden</option>
+            <option value="sonstiges">Sonstiges</option>
+          </select>
           <textarea name="nachricht" placeholder="Nachricht" required></textarea>
           <button type="submit">Senden</button>
         </form>
