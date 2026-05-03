@@ -19,13 +19,13 @@ function makeEl(tag, className) {
 }
 
 async function showThemen(main, themes) {
-  const grid = makeEl('div', 'content');
-  themes.forEach(theme => {
-    const link = makeEl('a', 'card');
+  const grid = makeEl("div", "content");
+  themes.forEach((theme) => {
+    const link = makeEl("a", "card");
     link.href = `?id=${encodeURIComponent(theme.id)}`;
-    const img = makeEl('div', 'card-image');
+    const img = makeEl("div", "card-image");
     img.style.backgroundImage = `url('${theme.image}')`;
-    const label = makeEl('div', 'card-label');
+    const label = makeEl("div", "card-label");
     label.textContent = theme.label;
     link.appendChild(img);
     link.appendChild(label);
@@ -35,43 +35,43 @@ async function showThemen(main, themes) {
 }
 
 async function showArtikel(main, themaId, themes, artikel) {
-  const themaIndex = themes.findIndex((t) => t.id === themaId);
-  const gefiltert = byDate(
-    artikel.filter((a) => Number(a.kategorie_id) - 1 === themaIndex)
-  );
+  const theme = themes.find((t) => t.id === themaId);
+  const gefiltert = byDate(artikel.filter((a) => a.kategorie_id === themaId));
 
-  const back = makeEl('button', 'back-btn');
-  back.textContent = '← Zurück';
-  back.addEventListener('click', () => history.back());
+  const back = makeEl("button", "back-btn");
+  back.textContent = "← Zurück";
+  back.addEventListener("click", () => history.back());
   main.appendChild(back);
 
-  const titel = makeEl('div', 'label-themen');
-  titel.textContent = themes[themaIndex]?.label ?? '';
+  const titel = makeEl("div", "label-themen");
+  titel.textContent = theme?.label ?? "";
   main.appendChild(titel);
 
-  const liste = makeEl('ul', 'artikel-liste');
+  const liste = makeEl("ul", "artikel-liste");
 
   if (gefiltert.length === 0) {
-    const li = makeEl('li');
-    li.style.padding = '20px';
-    li.textContent = 'Keine Artikel gefunden.';
+    const li = makeEl("li");
+    li.style.padding = "20px";
+    li.textContent = "Keine Artikel gefunden.";
     liste.appendChild(li);
   } else {
     gefiltert.forEach((a) => {
-      const card = tpl('template-artikel-card');
+      const card = tpl("template-artikel-card");
       const href = `artikel.html?id=${encodeURIComponent(a.id)}`;
-      const link = card.querySelector('a');
+      const link = card.querySelector("a");
       link.href = href;
       link.textContent = a.titel;
-      card.style.cursor = 'pointer';
-      card.addEventListener('click', () => { location.href = href; });
-      const img = card.querySelector('img');
+      card.style.cursor = "pointer";
+      card.addEventListener("click", () => {
+        location.href = href;
+      });
+      const img = card.querySelector("img");
       const src = firstImg(a.inhalt);
       if (img && src) {
         img.src = src;
         img.alt = a.titel;
         img.hidden = false;
-        card.querySelector('.artikel-image--placeholder')?.remove();
+        card.querySelector(".artikel-image--placeholder")?.remove();
       }
       liste.appendChild(card);
     });
@@ -80,17 +80,16 @@ async function showArtikel(main, themaId, themes, artikel) {
   main.appendChild(liste);
 }
 
-document.addEventListener('DOMContentLoaded', async () => {
-  const main = document.querySelector('.themen-main');
+document.addEventListener("DOMContentLoaded", async () => {
+  const main = document.querySelector(".themen-main");
   const [themes, artikel] = await Promise.all([
-    load('data/themes.json'),
-    load('data/artikel.json'),
+    load("data/themes.json"),
+    load("data/artikel.json"),
   ]);
-  const themaId = new URLSearchParams(location.search).get('id');
+  const themaId = new URLSearchParams(location.search).get("id");
   if (themaId) {
     await showArtikel(main, themaId, themes, artikel);
   } else {
     await showThemen(main, themes);
   }
 });
-

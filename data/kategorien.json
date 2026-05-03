@@ -1,0 +1,5 @@
+[
+  { "id": "sport",      "name": "Sport"      },
+  { "id": "fotografie", "name": "Fotografie" },
+  { "id": "musik",      "name": "Musik"      }
+]

@@ -2,232 +2,106 @@
   {
     "id": "7",
     "titel": "Die Golden Hour – Warum Fotografen dieses Licht lieben",
-    "kategorie_id": "2",
+    "kategorie_id": "fotografie",
     "datum": "2025-03-13",
     "autor_id": "3",
     "inhalt": [
-      {
-        "type": "text",
-        "content": "Die sogenannte Golden Hour gehört zu den beliebtesten Zeiten für Fotografen weltweit. Sie beschreibt die Phase kurz nach Sonnenaufgang und kurz vor Sonnenuntergang, in der das Licht besonders weich und warm ist."
-      },
-      {
-        "type": "text",
-        "content": "In dieser Zeit entstehen kaum harte Schatten, und die Farben wirken deutlich natürlicher und angenehmer. Porträts profitieren besonders davon, da Hauttöne weicher erscheinen und das gesamte Bild harmonischer wirkt."
-      },
-      {
-        "type": "img",
-        "content": "data/img/premiers-negatifs-verre-bd-767x767.jpg"
-      },
-      {
-        "type": "text",
-        "content": "Ein weiterer Vorteil ist die Richtung des Lichts. Da die Sonne tief steht, entstehen lange Schatten und spannende Kontraste, die Bildern mehr Tiefe verleihen."
-      },
-      {
-        "type": "text",
-        "content": "Wer die Golden Hour optimal nutzen möchte, sollte seine Shootings im Voraus planen. Apps und Wetterdienste helfen dabei, den perfekten Zeitpunkt zu bestimmen."
-      },
-      {
-        "type": "text",
-        "content": "Auch Landschaftsfotografen profitieren enorm von dieser Lichtstimmung. Berge, Städte oder Felder wirken in warmem Licht oft deutlich eindrucksvoller als bei neutralem Tageslicht."
-      }
+      { "type": "text", "content": "Die sogenannte Golden Hour gehört zu den beliebtesten Zeiten für Fotografen weltweit. Sie beschreibt die Phase kurz nach Sonnenaufgang und kurz vor Sonnenuntergang, in der das Licht besonders weich und warm ist." },
+      { "type": "text", "content": "In dieser Zeit entstehen kaum harte Schatten, und die Farben wirken deutlich natürlicher und angenehmer. Porträts profitieren besonders davon, da Hauttöne weicher erscheinen und das gesamte Bild harmonischer wirkt." },
+      { "type": "img", "content": "data/img/premiers-negatifs-verre-bd-767x767.jpg" },
+      { "type": "text", "content": "Ein weiterer Vorteil ist die Richtung des Lichts. Da die Sonne tief steht, entstehen lange Schatten und spannende Kontraste, die Bildern mehr Tiefe verleihen." },
+      { "type": "text", "content": "Wer die Golden Hour optimal nutzen möchte, sollte seine Shootings im Voraus planen. Apps und Wetterdienste helfen dabei, den perfekten Zeitpunkt zu bestimmen." },
+      { "type": "text", "content": "Auch Landschaftsfotografen profitieren enorm von dieser Lichtstimmung. Berge, Städte oder Felder wirken in warmem Licht oft deutlich eindrucksvoller als bei neutralem Tageslicht." }
     ]
   },
   {
     "id": "8",
     "titel": "Street Photography – Die Kunst des Augenblicks",
-    "kategorie_id": "2",
+    "kategorie_id": "fotografie",
     "datum": "2025-03-14",
     "autor_id": "1",
     "inhalt": [
-      {
-        "type": "text",
-        "content": "Street Photography ist eine der ehrlichsten Formen der Fotografie. Sie zeigt das echte Leben – ungefiltert, spontan und oft überraschend."
-      },
-      {
-        "type": "text",
-        "content": "Im Gegensatz zu inszenierten Shootings geht es hier darum, den richtigen Moment zu erkennen. Geduld und Aufmerksamkeit sind entscheidend."
-      },
-      {
-        "type": "img",
-        "content": "data/img/beispiel-fur-das-prinzip-der-camera-obscura-invertiert-zeigt-wie-das-bild-der-beleuchteten-flache-auf-der-linken-seite-angezeigt-wird-an-der-wand-der-dunklen-kammer-auf-der-rechten-seite-von-athanasius-kircher-ars-magna-amsterdam-1671-htmkc4.jpg"
-      },
-      {
-        "type": "text",
-        "content": "Viele Fotografen nutzen kleine, unauffällige Kameras, um natürliche Situationen einzufangen. So bleiben Menschen authentisch und reagieren nicht auf die Kamera."
-      },
-      {
-        "type": "text",
-        "content": "Auch Licht und Schatten spielen eine große Rolle. Besonders in Städten entstehen durch Gebäude interessante Kontraste und Linien."
-      },
-      {
-        "type": "text",
-        "content": "Street Photography erfordert Mut, da man oft fremde Menschen fotografiert. Mit Respekt und Feingefühl lassen sich jedoch beeindruckende Geschichten festhalten."
-      }
+      { "type": "text", "content": "Street Photography ist eine der ehrlichsten Formen der Fotografie. Sie zeigt das echte Leben – ungefiltert, spontan und oft überraschend." },
+      { "type": "text", "content": "Im Gegensatz zu inszenierten Shootings geht es hier darum, den richtigen Moment zu erkennen. Geduld und Aufmerksamkeit sind entscheidend." },
+      { "type": "img", "content": "data/img/short.jpg" },
+      { "type": "text", "content": "Viele Fotografen nutzen kleine, unauffällige Kameras, um natürliche Situationen einzufangen. So bleiben Menschen authentisch und reagieren nicht auf die Kamera." },
+      { "type": "text", "content": "Auch Licht und Schatten spielen eine große Rolle. Besonders in Städten entstehen durch Gebäude interessante Kontraste und Linien." },
+      { "type": "text", "content": "Street Photography erfordert Mut, da man oft fremde Menschen fotografiert. Mit Respekt und Feingefühl lassen sich jedoch beeindruckende Geschichten festhalten." }
     ]
   },
   {
     "id": "9",
     "titel": "Musik und Emotion – Warum uns Songs so tief berühren",
-    "kategorie_id": "3",
+    "kategorie_id": "musik",
     "datum": "2025-03-16",
     "autor_id": "2",
     "inhalt": [
-      {
-        "type": "text",
-        "content": "Musik hat die einzigartige Fähigkeit, Emotionen auszulösen. Ein bestimmter Song kann Erinnerungen wecken, die wir längst vergessen glaubten."
-      },
-      {
-        "type": "text",
-        "content": "Das liegt daran, dass Musik verschiedene Bereiche im Gehirn gleichzeitig anspricht – insbesondere jene, die für Emotionen und Erinnerungen zuständig sind."
-      },
-      {
-        "type": "img",
-        "content": "data/img/chud-chudjak.gif"
-      },
-      {
-        "type": "text",
-        "content": "Melodien, Rhythmen und Texte wirken zusammen und erzeugen eine emotionale Reaktion. Deshalb kann ein Song gleichzeitig traurig und schön sein."
-      },
-      {
-        "type": "text",
-        "content": "Viele Menschen nutzen Musik bewusst, um ihre Stimmung zu beeinflussen – sei es zur Entspannung, Motivation oder Verarbeitung von Gefühlen."
-      },
-      {
-        "type": "text",
-        "content": "Diese emotionale Verbindung macht Musik zu einem wichtigen Teil unseres Alltags und unserer Identität."
-      }
+      { "type": "text", "content": "Musik hat die einzigartige Fähigkeit, Emotionen auszulösen. Ein bestimmter Song kann Erinnerungen wecken, die wir längst vergessen glaubten." },
+      { "type": "text", "content": "Das liegt daran, dass Musik verschiedene Bereiche im Gehirn gleichzeitig anspricht – insbesondere jene, die für Emotionen und Erinnerungen zuständig sind." },
+      { "type": "img", "content": "data/img/chud-chudjak.gif" },
+      { "type": "text", "content": "Melodien, Rhythmen und Texte wirken zusammen und erzeugen eine emotionale Reaktion. Deshalb kann ein Song gleichzeitig traurig und schön sein." },
+      { "type": "text", "content": "Viele Menschen nutzen Musik bewusst, um ihre Stimmung zu beeinflussen – sei es zur Entspannung, Motivation oder Verarbeitung von Gefühlen." },
+      { "type": "text", "content": "Diese emotionale Verbindung macht Musik zu einem wichtigen Teil unseres Alltags und unserer Identität." }
     ]
   },
   {
     "id": "10",
     "titel": "Vom Hobby zum Künstler – Wege in die Musikbranche",
-    "kategorie_id": "3",
+    "kategorie_id": "musik",
     "datum": "2025-03-17",
     "autor_id": "4",
     "inhalt": [
-      {
-        "type": "text",
-        "content": "Der Traum, mit Musik Geld zu verdienen, ist für viele Menschen attraktiv. Doch der Weg dorthin hat sich stark verändert."
-      },
-      {
-        "type": "text",
-        "content": "Früher war ein Plattenvertrag fast unverzichtbar. Heute können Künstler ihre Musik selbst veröffentlichen und über Plattformen weltweit verbreiten."
-      },
-      {
-        "type": "img",
-        "content": "assets/img/hq720.jpg"
-      },
-      {
-        "type": "text",
-        "content": "Social Media ist dabei ein entscheidender Faktor. Wer es schafft, Aufmerksamkeit zu erzeugen, kann sich schnell eine Fanbase aufbauen."
-      },
-      {
-        "type": "text",
-        "content": "Dennoch erfordert Erfolg Disziplin, Kreativität und Durchhaltevermögen. Die Konkurrenz ist groß und die Aufmerksamkeitsspanne des Publikums gering."
-      },
-      {
-        "type": "text",
-        "content": "Langfristig erfolgreich sind meist jene, die ihren eigenen Stil entwickeln und authentisch bleiben."
-      }
+      { "type": "text", "content": "Der Traum, mit Musik Geld zu verdienen, ist für viele Menschen attraktiv. Doch der Weg dorthin hat sich stark verändert." },
+      { "type": "text", "content": "Früher war ein Plattenvertrag fast unverzichtbar. Heute können Künstler ihre Musik selbst veröffentlichen und über Plattformen weltweit verbreiten." },
+      { "type": "img", "content": "data/img/hq720.jpg" },
+      { "type": "text", "content": "Social Media ist dabei ein entscheidender Faktor. Wer es schafft, Aufmerksamkeit zu erzeugen, kann sich schnell eine Fanbase aufbauen." },
+      { "type": "text", "content": "Dennoch erfordert Erfolg Disziplin, Kreativität und Durchhaltevermögen. Die Konkurrenz ist groß und die Aufmerksamkeitsspanne des Publikums gering." },
+      { "type": "text", "content": "Langfristig erfolgreich sind meist jene, die ihren eigenen Stil entwickeln und authentisch bleiben." }
     ]
   },
   {
     "id": "11",
     "titel": "Joggen für Anfänger – Der richtige Start",
-    "kategorie_id": "4",
+    "kategorie_id": "sport",
     "datum": "2025-03-19",
     "autor_id": "1",
     "inhalt": [
-      {
-        "type": "text",
-        "content": "Joggen ist eine der einfachsten Möglichkeiten, fit zu werden. Dennoch machen viele Anfänger den Fehler, zu schnell zu starten."
-      },
-      {
-        "type": "text",
-        "content": "Wichtig ist ein langsamer Einstieg. Kurze Laufeinheiten im Wechsel mit Gehen sind ideal, um den Körper zu gewöhnen."
-      },
-      {
-        "type": "img",
-        "content": "data/img/giphy.gif"
-      },
-      {
-        "type": "text",
-        "content": "Auch die richtige Ausrüstung spielt eine Rolle. Gute Laufschuhe können Verletzungen vorbeugen und den Komfort erhöhen."
-      },
-      {
-        "type": "text",
-        "content": "Mit der Zeit lassen sich Distanz und Tempo steigern. Geduld ist dabei der Schlüssel zum Erfolg."
-      },
-      {
-        "type": "text",
-        "content": "Wer regelmäßig läuft, wird schnell Fortschritte merken – sowohl körperlich als auch mental."
-      }
+      { "type": "text", "content": "Joggen ist eine der einfachsten Möglichkeiten, fit zu werden. Dennoch machen viele Anfänger den Fehler, zu schnell zu starten." },
+      { "type": "text", "content": "Wichtig ist ein langsamer Einstieg. Kurze Laufeinheiten im Wechsel mit Gehen sind ideal, um den Körper zu gewöhnen." },
+      { "type": "img", "content": "data/img/giphy.gif" },
+      { "type": "text", "content": "Auch die richtige Ausrüstung spielt eine Rolle. Gute Laufschuhe können Verletzungen vorbeugen und den Komfort erhöhen." },
+      { "type": "text", "content": "Mit der Zeit lassen sich Distanz und Tempo steigern. Geduld ist dabei der Schlüssel zum Erfolg." },
+      { "type": "text", "content": "Wer regelmäßig läuft, wird schnell Fortschritte merken – sowohl körperlich als auch mental." }
     ]
   },
   {
     "id": "12",
     "titel": "Die mentale Stärke im Sport",
-    "kategorie_id": "4",
+    "kategorie_id": "sport",
     "datum": "2025-03-20",
     "autor_id": "2",
     "inhalt": [
-      {
-        "type": "text",
-        "content": "Sport ist nicht nur körperlich anspruchsvoll, sondern auch eine mentale Herausforderung. Motivation und Disziplin spielen eine zentrale Rolle."
-      },
-      {
-        "type": "text",
-        "content": "Viele Erfolge im Sport hängen davon ab, wie gut man mit Rückschlägen umgehen kann."
-      },
-      {
-        "type": "img",
-        "content": "data/img/d2f9a9de-0002-0004-0000-0000821e3c1d_w520_r1.33_fpx50_fpy47.22.jpg"
-      },
-      {
-        "type": "text",
-        "content": "Mentale Stärke lässt sich trainieren – durch Routinen, Zielsetzung und positives Denken."
-      },
-      {
-        "type": "text",
-        "content": "Sport hilft gleichzeitig dabei, Selbstvertrauen aufzubauen und die eigene Belastbarkeit zu erhöhen."
-      },
-      {
-        "type": "text",
-        "content": "Diese Fähigkeiten wirken sich oft auch positiv auf andere Lebensbereiche aus."
-      }
+      { "type": "text", "content": "Sport ist nicht nur körperlich anspruchsvoll, sondern auch eine mentale Herausforderung. Motivation und Disziplin spielen eine zentrale Rolle." },
+      { "type": "text", "content": "Viele Erfolge im Sport hängen davon ab, wie gut man mit Rückschlägen umgehen kann." },
+      { "type": "img", "content": "data/img/d2f9a9de-0002-0004-0000-0000821e3c1d_w520_r1.33_fpx50_fpy47.22.jpg" },
+      { "type": "text", "content": "Mentale Stärke lässt sich trainieren – durch Routinen, Zielsetzung und positives Denken." },
+      { "type": "text", "content": "Sport hilft gleichzeitig dabei, Selbstvertrauen aufzubauen und die eigene Belastbarkeit zu erhöhen." },
+      { "type": "text", "content": "Diese Fähigkeiten wirken sich oft auch positiv auf andere Lebensbereiche aus." }
     ]
   },
   {
     "id": "13",
     "titel": "Smartphone-Fotografie – Mehr als nur Schnappschüsse",
-    "kategorie_id": "2",
+    "kategorie_id": "fotografie",
     "datum": "2025-03-21",
     "autor_id": "3",
     "inhalt": [
-      {
-        "type": "text",
-        "content": "Moderne Smartphones haben die Fotografie revolutioniert. Noch nie war es so einfach, hochwertige Bilder aufzunehmen."
-      },
-      {
-        "type": "text",
-        "content": "Viele Geräte verfügen über mehrere Kameras, KI-Unterstützung und leistungsstarke Bildbearbeitung direkt im Gerät."
-      },
-      {
-        "type": "img",
-        "content": "data/img/Tourist_guy.jpg"
-      },
-      {
-        "type": "text",
-        "content": "Dennoch gelten die gleichen Grundlagen wie bei klassischen Kameras: Licht, Komposition und Perspektive sind entscheidend."
-      },
-      {
-        "type": "text",
-        "content": "Wer bewusst fotografiert, kann auch mit dem Smartphone beeindruckende Ergebnisse erzielen."
-      },
-      {
-        "type": "text",
-        "content": "Die beste Kamera ist am Ende immer die, die man dabei hat – und das ist heute fast immer das Smartphone."
-      }
+      { "type": "text", "content": "Moderne Smartphones haben die Fotografie revolutioniert. Noch nie war es so einfach, hochwertige Bilder aufzunehmen." },
+      { "type": "text", "content": "Viele Geräte verfügen über mehrere Kameras, KI-Unterstützung und leistungsstarke Bildbearbeitung direkt im Gerät." },
+      { "type": "img", "content": "data/img/Tourist_guy.jpg" },
+      { "type": "text", "content": "Dennoch gelten die gleichen Grundlagen wie bei klassischen Kameras: Licht, Komposition und Perspektive sind entscheidend." },
+      { "type": "text", "content": "Wer bewusst fotografiert, kann auch mit dem Smartphone beeindruckende Ergebnisse erzielen." },
+      { "type": "text", "content": "Die beste Kamera ist am Ende immer die, die man dabei hat – und das ist heute fast immer das Smartphone." }
     ]
   }
 ]

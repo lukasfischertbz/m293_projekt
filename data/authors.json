@@ -8,5 +8,15 @@
     "id": "2",
     "name": "Leon Schmidt",
     "email": "leon.schmidt@blog.de"
+  },
+  {
+    "id": "3",
+    "name": "Sophie Weber",
+    "email": "sophie.weber@blog.de"
+  },
+  {
+    "id": "4",
+    "name": "Tobias Braun",
+    "email": "tobias.braun@blog.de"
   }
 ]
