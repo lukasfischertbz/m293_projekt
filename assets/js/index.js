@@ -28,11 +28,14 @@ if (liste) {
       .slice(0, 3)
       .map((a) => {
         const card = tpl("template-artikel-card");
+        const href = `artikel.html?id=${encodeURIComponent(a.id)}`;
         const link = card.querySelector("a");
         const img = card.querySelector("img");
         const src = firstImg(a.inhalt);
-        link.href = `artikel.html?id=${encodeURIComponent(a.id)}`;
+        link.href = href;
         link.textContent = a.titel;
+        card.style.cursor = "pointer";
+        card.addEventListener("click", () => { location.href = href; });
         if (img && src) {
           img.src = src;
           img.alt = a.titel;
